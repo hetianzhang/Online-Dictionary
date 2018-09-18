@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.1" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="server.Server" project="DomParser" file="/DomParser/src/server/Server.java" 
+    binary="false" label="server" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="172" y="0"/>    
+    <execution id="2">      
+      <position height="63" width="61" x="83" y="104"/>    
+    </execution>    
+    <execution id="5">      
+      <position height="63" width="61" x="83" y="193"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="296" width="61" x="83" y="281"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="84" width="0" x="0" y="78"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="21" width="0" x="0" y="120"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="105" width="61" x="5" y="591"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="21" width="7" x="32" y="633"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="124" width="61" x="5" y="724"/>    
+    </execution>    
+    <execution id="21">      
+      <position height="21" width="7" x="32" y="785"/>    
+    </execution>  
+  </object>  
+  <object id="22" language="java" name="parser.StreamDemo" project="DomParser" 
+    file="/DomParser/src/parser/StreamDemo.java" binary="false" label="streamDemo" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="46" y="0"/>    
+    <execution id="4">      
+      <position height="21" width="98" x="148" y="125"/>    
+    </execution>    
+    <execution id="7">      
+      <position height="21" width="98" x="148" y="214"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="254" width="98" x="148" y="302"/>    
+    </execution>    
+    <execution id="28">      
+      <position height="21" width="0" x="0" y="514"/>    
+    </execution>  
+  </object>  
+  <object id="29" language="java" name="java.io.BufferedReader" project="DomParser" 
+    file="C:/Program Files/Java/jre1.8.0_144/lib/rt.jar" binary="true" label="bufferedReader" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="24">      
+      <position height="21" width="0" x="0" y="323"/>    
+    </execution>  
+  </object>  
+  <object id="30" language="java" name="java.io.BufferedReader" project="DomParser" 
+    file="C:/Program Files/Java/jre1.8.0_144/lib/rt.jar" binary="true" label="bufferedReader1" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="26">      
+      <position height="21" width="0" x="0" y="403"/>    
+    </execution>  
+  </object>  
+  <object id="31" language="java" name="java.util.concurrent.ExecutorService" project="ClientServer 3" 
+    file="C:/Program Files/Java/jre1.8.0_144/lib/rt.jar" binary="true" label="executorService" type="interface" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="885" y="0"/>    
+    <execution id="16">      
+      <position height="63" width="117" x="406" y="612"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="82" width="117" x="406" y="745"/>    
+    </execution>  
+  </object>  
+  <combined-fragment id="34" interaction-operator="LOOP">    
+    <interaction-operand id="35" constraint="while: line != null">      
+      <fragment refId="25"/>    
+    </interaction-operand>  
+  </combined-fragment>  
+  <combined-fragment id="36" interaction-operator="CRITICAL">    
+    <interaction-operand id="37">      
+      <fragment refId="27"/>    
+    </interaction-operand>  
+  </combined-fragment>  
+  <message id="3" operation="StreamDemo()" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" operation="initialize():void" asynchronous="false">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="9" operation="readDictionary(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="12" operation="Server(parser.StreamDemo)" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="15" operation="submit(java.lang.Runnable):java.util.concurrent.Future&lt;?&gt;" asynchronous="false">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="19" operation="submit(java.lang.Runnable):java.util.concurrent.Future&lt;?&gt;" asynchronous="false">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="23" operation="readLine():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="25" operation="readLine():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>  
+  <message id="27" operation="fromXMLtoObject(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="28"/>  
+  </message>  
+  <message id="32" operation="backupService(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="33" operation="serveClient(java.net.Socket):void" asynchronous="false">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="21"/>  
+  </message>
+</sequence-diagram>

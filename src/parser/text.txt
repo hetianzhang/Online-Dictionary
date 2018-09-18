@@ -1,0 +1,50 @@
+<Dictionary>
+  <version name="dictionary-demo" author="tzhe" version="2017-08-30"/>
+  <s>
+    <string>bitch</string>
+    <list>
+      <D>
+        <definations>[&quot;a female dog, wolf, fox, or otter.&quot;]</definations>
+        <examples></examples>
+      </D>
+      <D>
+        <definations>[&quot;a spiteful or unpleasant woman.&quot;]</definations>
+        <examples></examples>
+      </D>
+      <D>
+        <definations>[&quot;a difficult or unpleasant situation or thing&quot;]</definations>
+        <examples>[{&quot;text&quot;:&quot;working the night shift is a bitch&quot;}]</examples>
+      </D>
+      <D>
+        <definations>[&quot;a complaint&quot;]</definations>
+        <examples>[{&quot;text&quot;:&quot;my big bitch is that there&apos;s nothing new here&quot;}]</examples>
+      </D>
+      <D>
+        <definations>[&quot;make spitefully critical comments&quot;]</definations>
+        <examples>[{&quot;text&quot;:&quot;everybody was bitching about their colleagues&quot;}]</examples>
+      </D>
+    </list>
+  </s>
+  <s>
+    <string>paradise</string>
+    <list>
+      <D>
+        <definations>heaven, as the final abode of the righteous.</definations>
+        <examples>This place is just like a heaven!</examples>
+      </D>
+      <D>
+        <definations>an intermediate place for the departed souls of the righteous awaiting resurrection.</definations>
+        <examples> Christians have identified paradise both with the Garden of Eden and with heaven.</examples>
+      </D>
+    </list>
+  </s>
+  <s>
+    <string>dog</string>
+    <list>
+      <D>
+        <definations>a domesticated canid, Canis familiaris, bred in many varieties.</definations>
+        <examples>I am raising a dog!</examples>
+      </D>
+    </list>
+  </s>
+</Dictionary>

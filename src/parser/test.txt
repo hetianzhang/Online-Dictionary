@@ -1,0 +1,25 @@
+<Dictionary>
+  <version name="dictionary-demo" author="tzhe" version="27-08-2017"/>
+  <s>
+    <string>paradise</string>
+    <list>
+      <D>
+        <definations>heaven, as the final abode of the righteous.</definations>
+        <examples>This place is just like a heaven!</examples>
+      </D>
+      <D>
+        <definations>an intermediate place for the departed souls of the righteous awaiting resurrection.</definations>
+        <examples> Christians have identified paradise both with the Garden of Eden and with heaven.</examples>
+      </D>
+    </list>
+  </s>
+  <s>
+    <string>dog</string>
+    <list>
+      <D>
+        <definations>a domesticated canid, Canis familiaris, bred in many varieties.</definations>
+        <examples>I am raising a dog!</examples>
+      </D>
+    </list>
+  </s>
+</Dictionary>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.2.1" icons="true" generate-combined-fragments="true">  
+  <object id="1" language="java" name="client.Client" project="DomParser" file="/DomParser/src/client/Client.java" 
+    binary="false" label="client" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="79" y="0"/>    
+    <execution id="2">      
+      <position height="773" width="55" x="5" y="94"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="710" width="55" x="5" y="136"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="server.Server" project="DomParser" file="/DomParser/src/server/Server.java" 
+    binary="false" label="server" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="270" y="0"/>    
+    <execution id="6">      
+      <position height="696" width="61" x="64" y="129"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="633" width="61" x="64" y="171"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="parser.StreamDemo" project="DomParser" 
+    file="/DomParser/src/parser/StreamDemo.java" binary="false" label="streamDemo" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="314" y="0"/>    
+    <execution id="11">      
+      <position height="269" width="98" x="129" y="230"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="226" width="98" x="129" y="557"/>    
+    </execution>    
+    <execution id="26">      
+      <position height="21" width="0" x="0" y="599"/>    
+    </execution>    
+    <execution id="28">      
+      <position height="21" width="0" x="0" y="689"/>    
+    </execution>    
+    <execution id="30">      
+      <position height="21" width="0" x="0" y="741"/>    
+    </execution>  
+  </object>  
+  <object id="31" language="java" name="parser.Dictionary" project="DomParser" 
+    file="/DomParser/src/parser/Dictionary.java" binary="false" label="dc" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="16">      
+      <position height="21" width="0" x="0" y="251"/>    
+    </execution>  
+  </object>  
+  <object id="32" language="java" name="java.util.List" project="DomParser" 
+    file="C:/Program Files/Java/jre1.8.0_144/lib/rt.jar" binary="true" label="deflist" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="18">      
+      <position height="21" width="0" x="0" y="293"/>    
+    </execution>  
+  </object>  
+  <object id="33" language="java" name="java.util.Iterator" project="DomParser" 
+    file="C:/Program Files/Java/jre1.8.0_144/lib/rt.jar" binary="true" label="j" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="20">      
+      <position height="21" width="0" x="0" y="373"/>    
+    </execution>  
+  </object>  
+  <object id="34" language="java" name="parser.Definition" project="DomParser" 
+    file="/DomParser/src/parser/Definition.java" binary="false" label="def" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="22">      
+      <position height="21" width="0" x="0" y="415"/>    
+    </execution>    
+    <execution id="24">      
+      <position height="21" width="0" x="0" y="457"/>    
+    </execution>  
+  </object>  
+  <combined-fragment id="35" interaction-operator="ALT">    
+    <interaction-operand id="36">      
+      <fragment refId="15"/>      
+      <fragment refId="37"/>      
+      <fragment refId="10"/>      
+      <fragment refId="17"/>    
+    </interaction-operand>    
+    <interaction-operand id="38" constraint="streamDemo.query(word) == null">      
+      <fragment refId="25"/>      
+      <fragment refId="12"/>      
+      <fragment refId="39"/>    
+    </interaction-operand>    
+    <combined-fragment id="37" interaction-operator="LOOP">      
+      <interaction-operand id="40" constraint="while: j.hasNext()">        
+        <fragment refId="23"/>        
+        <fragment refId="19"/>        
+        <fragment refId="21"/>      
+      </interaction-operand>    
+    </combined-fragment>    
+    <combined-fragment id="39" interaction-operator="ALT">      
+      <interaction-operand id="41" constraint="senses.isEmpty() == false">        
+        <fragment refId="29"/>        
+        <fragment refId="27"/>      
+      </interaction-operand>      
+      <interaction-operand id="42" constraint="else"/>    
+    </combined-fragment>  
+  </combined-fragment>  
+  <message id="3" operation="request(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="8" operation="serveClient(java.net.Socket):void" asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" operation="query(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" operation="addFromOxford(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="15" operation="get(java.lang.String):java.util.List&lt;Definition&gt;" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="iterator():java.util.Iterator&lt;E&gt;" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="next():E" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="getDefinations():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" operation="getExamples():java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="25" operation="jsonDefList(java.lang.String):java.util.List&lt;Definition&gt;" asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>  
+  <message id="27" operation="addEntry(java.lang.String,java.util.List&lt;parser.Definition&gt;):java.lang.String" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="28"/>  
+  </message>  
+  <message id="29" operation="query(java.lang.String):java.lang.String" asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="30"/>  
+  </message>
+</sequence-diagram>
